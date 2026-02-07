@@ -1,0 +1,51 @@
+def addition (a, b):
+    return a + b
+
+def subtract (a, b):
+    return a - b
+
+def multiplication (a, b):
+    return a * b
+
+def division (a, b):
+    if b == 0:
+        return "Error! Division by zero."
+    return a / b
+
+print("Welcome to the calculator program!\nPress q to exit.\n" + "-" * 20)
+
+while True:
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+
+    except (ValueError, TypeError):
+        print("Invalid input! Please enter numeric values.")
+
+    print("Select operation")
+    print("+. Addition")
+    print("-. Subtraction")
+    print("*. Multiplication")
+    print("/. Division")
+    print("-" * 20)
+
+    operation = input ("Enter operation number (+, -, *, /): ")
+
+    if operation == "+":
+        result = addition(num1, num2)
+    elif operation == "-":
+        result = subtract(num1, num2)
+    elif operation == "*":
+        result = multiplication(num1, num2)
+    elif operation == "/":
+        result = division(num1, num2)
+    else:
+        print("Invalid operation")
+        
+    print("-" * 20)
+    try:    
+        print(f"Result: {result}")
+    except NameError:
+        print("Error: No result to display.")
+
+print("Exiting the calculator. Goodbye!")
