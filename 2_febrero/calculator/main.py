@@ -12,39 +12,42 @@ def division (a, b):
         return "Error! Division by zero."
     return a / b
 
-print("Welcome to the calculator program!\nPress q to exit.\n" + "-" * 20)
+startCalculator = True
+while startCalculator:
+    startCalculator = input("Welcome to the calculator program!\nPress q to exit.\nPress Enter to continue\n" + "-" * 20 + "\n")
 
-try:
-    num1 = float(input("Enter first number: "))
-    num2 = float(input("Enter second number: "))
+    if startCalculator.lower() == 'q':
+        startCalculator = False
+    else:
+        try:
+            num1 = float(input("Enter first number: "))
+            num2 = float(input("Enter second number: "))
 
-except (ValueError, TypeError):
-    print("Invalid input! Please enter numeric values.")
+        except (ValueError, TypeError):
+            print("Invalid input! Please enter numeric values.")
 
-print("Select operation")
-print("+. Addition")
-print("-. Subtraction")
-print("*. Multiplication")
-print("/. Division")
-print("-" * 20)
+        print("Select operation")
+        print("+. Addition")
+        print("-. Subtraction")
+        print("*. Multiplication")
+        print("/. Division")
+        print("-" * 20)
 
-operation = input ("Enter operation number (+, -, *, /): ")
+        operation = input ("Enter operation number (+, -, *, /): ")
 
-if operation == "+":
-    result = addition(num1, num2)
-elif operation == "-":
-    result = subtract(num1, num2)
-elif operation == "*":
-    result = multiplication(num1, num2)
-elif operation == "/":
-    result = division(num1, num2)
-else:
-    print("Invalid operation")
-    
-print("-" * 20)
-try:    
-    print(f"Result: {result}")
-except NameError:
-    print("Error: No result to display.")
-
-print("Exiting the calculator. Goodbye!")
+        if operation == "+":
+            result = addition(num1, num2)
+        elif operation == "-":
+            result = subtract(num1, num2)
+        elif operation == "*":
+            result = multiplication(num1, num2)
+        elif operation == "/":
+            result = division(num1, num2)
+        else:
+            print("Invalid operation")
+            
+        print("-" * 20)
+        try:    
+            print(f"Result: {result}\n" + "-" * 20)
+        except NameError:
+            print("Error: No result to display.")
