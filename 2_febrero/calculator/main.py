@@ -1,54 +1,47 @@
+# Version 2.0
+
 def addition (a, b):
-    return a + b
+	return a + b
 
 def subtract (a, b):
-    return a - b
+	return a - b
 
 def multiplication (a, b):
-    return a * b
+	return a * b
 
 def division (a, b):
-    if b == 0:
-        return "Error! Division by zero."
-    return a / b
+	if b == 0:
+		print("Division by zero!! Try again please")
+	return a / b
 
 startCalculator = True
+cutPrint = "-" * 20
+print("Naka dev calculator! The best calculator around the world!\n" + cutPrint)
+
 while startCalculator:
-    startCalculator = input("Welcome to the calculator program!\nPress q to exit.\nPress Enter to continue\n" + "-" * 20 + "\n")
+	try:
+		num1 = float(input("Type the first number: "))
+		num2 = float(input("Type the second number: "))
+		print(cutPrint)
+	except(ValueError):
+		print(cutPrint + "\nPlease, check the numbers, maybe you are typing non numeric data\n" + cutPrint)
 
-    if startCalculator.lower() == 'q':
-        startCalculator = False
-    try:
-        num1 = float(input("Enter first number: "))
-        num2 = float(input("Enter second number: "))
-    except ValueError:
-        print("Invalid input! Please enter a numeric value.")
-        continue
+	print("+. Addition")
+	print("-. Subtraction")
+	print("*. Multiplication")
+	print("/. Division")
+	print(cutPrint)
+	selectOperator = input("Select operation: ")
 
-    if num2 == 0:
-        print("Invalid input! Please enter numeric values.")
-    else: 
-        print("Select operation")
-        print("+. Addition")
-        print("-. Subtraction")
-        print("*. Multiplication")
-        print("/. Division")
-        print("-" * 20)
-        operation = input ("Enter operator ")
+	if selectOperator != '+' and selectOperator != '-' and selectOperator != '*' and selectOperator != '/':
+		print("You must type a valid operator! Please check the options ")
+	elif selectOperator == '+':
+		addition(num1, num2)
+	elif selectOperator == '-':
+		subtract(num1, num2)
+	elif selectOperator == '*':
+		multiplication(num1, num2)
+	elif selectOperator == '/':
+		division(num1, num2)
 
-        if operation == "+":
-            result = addition(num1, num2)
-        elif operation == "-":
-            result = subtract(num1, num2)
-        elif operation == "*":
-            result = multiplication(num1, num2)
-        elif operation == "/":
-            result = division(num1, num2)
-        else:
-            print("Invalid operation")
-        print("-" * 20)
-        
-        try:    
-            print(f"Result: {result}\n" + "-" * 20)
-        except NameError:
-            print("Error: No result to display.")
+
