@@ -18,22 +18,23 @@ while startCalculator:
 
     if startCalculator.lower() == 'q':
         startCalculator = False
-    else:
-        try:
-            num1 = float(input("Enter first number: "))
-            num2 = float(input("Enter second number: "))
+    try:
+        num1 = float(input("Enter first number: "))
+        num2 = float(input("Enter second number: "))
+    except ValueError:
+        print("Invalid input! Please enter a numeric value.")
+        continue
 
-        except (ValueError, TypeError):
-            print("Invalid input! Please enter numeric values.")
-
+    if num2 == 0:
+        print("Invalid input! Please enter numeric values.")
+    else: 
         print("Select operation")
         print("+. Addition")
         print("-. Subtraction")
         print("*. Multiplication")
         print("/. Division")
         print("-" * 20)
-
-        operation = input ("Enter operation number (+, -, *, /): ")
+        operation = input ("Enter operator ")
 
         if operation == "+":
             result = addition(num1, num2)
@@ -45,8 +46,8 @@ while startCalculator:
             result = division(num1, num2)
         else:
             print("Invalid operation")
-            
         print("-" * 20)
+        
         try:    
             print(f"Result: {result}\n" + "-" * 20)
         except NameError:
