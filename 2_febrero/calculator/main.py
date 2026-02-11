@@ -10,21 +10,24 @@ def multiplication (a, b):
 	return a * b
 
 def division (a, b):
-	if b == 0:
-		print("Division by zero!! Try again please")
 	return a / b
 
 startCalculator = True
+areNumbers = True
 cutPrint = "-" * 20
 print("Naka dev calculator! The best calculator around the world!\n" + cutPrint)
 
 while startCalculator:
-	try:
-		num1 = float(input("Type the first number: "))
-		num2 = float(input("Type the second number: "))
-		print(cutPrint)
-	except(ValueError):
-		print(cutPrint + "\nPlease, check the numbers, maybe you are typing non numeric data\n" + cutPrint)
+	while areNumbers:
+		try:
+			num1 = float(input("Type the first number: "))
+			num2 = float(input("Type the second number: "))
+			areNumbers = False
+			print(cutPrint)
+		except (ValueError):
+			print(cutPrint)
+			print("Please, type only digits")
+			print(cutPrint)
 
 	print("+. Addition")
 	print("-. Subtraction")
@@ -34,14 +37,25 @@ while startCalculator:
 	selectOperator = input("Select operation: ")
 
 	if selectOperator != '+' and selectOperator != '-' and selectOperator != '*' and selectOperator != '/':
+		# if selectOperator not in ['+', '-', '*', '/']: I can use this structure
 		print("You must type a valid operator! Please check the options ")
 	elif selectOperator == '+':
-		addition(num1, num2)
+		print(addition(num1, num2))
 	elif selectOperator == '-':
-		subtract(num1, num2)
+		print(subtract(num1, num2))
 	elif selectOperator == '*':
-		multiplication(num1, num2)
+		print(multiplication(num1, num2))
 	elif selectOperator == '/':
-		division(num1, num2)
+		if num2 == 0:
+			print("Cannot divide by zero!")
+		else:
+			print(division(num1, num2))
 
+	finishCalculator = input("Press 'Enter' to continue or 'q' to exit: ")
+	print(cutPrint)
 
+	if finishCalculator == 'q':
+		startCalculator = False
+	else:
+		areNumbers = True
+		continue
