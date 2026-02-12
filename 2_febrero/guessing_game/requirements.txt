@@ -1,0 +1,56 @@
+🎯 Project: Number Guessing Game (v1 — Clean CLI Version)
+Objective
+
+Build a terminal game where:
+
+The computer generates a random number
+
+The user tries to guess it
+
+The program gives feedback:
+
+Too high
+
+Too low
+
+Correct
+
+Count attempts
+
+Handle invalid input properly
+--------------------------------
+
+🧠 Concepts You’ll Practice
+
+while loops
+
+if / elif / else
+
+import random
+
+Input validation
+
+Type conversion
+
+Basic game logic
+
+Control flow
+
+--------------------------------------
+🏗 Step 1 — Basic Version (Core Logic)
+
+Before I give you the full solution, I want you to think like a developer.
+
+Questions:
+
+How do we generate a random number between 1 and 100?
+
+How do we keep asking the user until they guess correctly?
+
+How do we count attempts?
+
+Answer those quickly in code form (even if imperfect).
+
+If you prefer, we can also build it together step-by-step.
+
+Your move, dev. 🚀
