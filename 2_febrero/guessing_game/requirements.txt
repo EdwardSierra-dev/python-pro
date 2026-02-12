@@ -3,9 +3,9 @@ Objective
 
 Build a terminal game where:
 
-The computer generates a random number
+The computer generates a random number ✅
 
-The user tries to guess it
+The user tries to guess it 
 
 The program gives feedback:
 

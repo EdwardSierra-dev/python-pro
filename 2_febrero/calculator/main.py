@@ -54,7 +54,7 @@ while startCalculator:
 	finishCalculator = input("Press 'Enter' to continue or 'q' to exit: ")
 	print(cutPrint)
 
-	if finishCalculator == 'q':
+	if finishCalculator.lower() == 'q':
 		startCalculator = False
 	else:
 		areNumbers = True
