@@ -1,41 +1,25 @@
 🎯 Project: Number Guessing Game (v1 — Clean CLI Version)
 Objective
 
+Cambios para la version 2:
+
+1) Cambiar logica del conteo de intentos.
+
 Build a terminal game where:
-
 The computer generates a random number ✅
-
 The user tries to guess it 
-
-The program gives feedback:
-
-Too high
-
-Too low
-
 Correct
-
 Count attempts
-
 Handle invalid input properly
 --------------------------------
-
 🧠 Concepts You’ll Practice
-
-while loops
-
+while loop
 if / elif / else
-
 import random
-
 Input validation
-
 Type conversion
-
 Basic game logic
-
 Control flow
-
 --------------------------------------
 🏗 Step 1 — Basic Version (Core Logic)
 
