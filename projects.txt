@@ -1,0 +1,43 @@
+python-pro/
+│
+├── 01_basics/
+│   ├── calculator/
+│   ├── guessing_game/
+│   └── text_parser/
+│
+├── 02_data_structures/
+│   ├── todo_list/
+│   ├── word_counter/
+│
+├── 03_files_and_os/
+│   ├── log_analyzer/
+│   ├── file_organizer/
+│
+├── 04_oop/
+│   ├── bank_account/
+│   ├── inventory_system/
+│
+├── 05_testing/
+│   ├── pytest_intro/
+│
+├── 06_apis/
+│   ├── weather_client/
+│
+├── 07_automation/
+│   ├── csv_to_db/
+│   ├── email_sender/
+│
+├── 08_web_backend/
+│   ├── flask_api/
+│
+├── 09_async/
+│   ├── asyncio_scraper/
+│
+├── 10_databases/
+│   ├── sqlite_crud/
+│
+├── 11_clean_architecture/
+│   ├── service_layer_example/
+│
+├── 12_final_project/
+│   └── mini_product/

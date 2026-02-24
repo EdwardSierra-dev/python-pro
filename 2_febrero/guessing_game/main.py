@@ -2,7 +2,7 @@ import random
 
 # Define a random number between 0 and 10
 def generateRandomNum():
-  return random.randrange(0,10,1)
+  return random.randrange(0,10)
 
 # Variables
 startGame = True
