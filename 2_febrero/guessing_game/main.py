@@ -10,7 +10,7 @@ randomNumbers = []
 countCorrect = 0
 cutPrint = "-" * 30
 
-
+# Start Messages
 print(cutPrint)
 print("Hi! I'd generated 3 random numbers! 😈")
 print("If you guess 2 times you'll winner!!!")
@@ -24,20 +24,26 @@ else:
   while startGame:
     countCorrect = 0
     randomNumbers.clear()
+
+    # save and create random numbers
     for i in range(3):
       randomNumbers.append(generateRandomNum())
     print(randomNumbers)
+
     print("Game stared! 😎")
     for i in range(3):
       userNum = int(input(f"Guess the number {i + 1}: "))
+      print("numero user",userNum)
       print(cutPrint)
+
       if userNum == randomNumbers[i]:
-        # Claro aquí solo compara en el input con la posición pero necesito buscarlo en todos los indices jeje cagada
-        print(cutPrint)
         countCorrect += 1
+        print("conteo",countCorrect)
+        print("numero user",userNum)
+        print("numero random",randomNumbers[i])
       else:
-          print("Wrong! Try again! 😈")
-          print(cutPrint)
+        print("Wrong! Try again! 😈")
+        print(cutPrint)
 
     if countCorrect >= 2:
       print("Congratulations! You win! 🥳")
