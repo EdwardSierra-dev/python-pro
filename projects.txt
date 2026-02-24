@@ -1,12 +1,12 @@
 python-pro/
 │
 ├── 01_basics/
-│   ├── calculator/
-│   ├── guessing_game/
-│   └── text_parser/
+│   ├── calculator/✅
+│   ├── guessing_game/✅
+│   └── text_parser/⌛
 │
 ├── 02_data_structures/
-│   ├── todo_list/
+│   ├── todo_list/⌛
 │   ├── word_counter/
 │
 ├── 03_files_and_os/

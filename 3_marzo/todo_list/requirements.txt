@@ -1,0 +1,109 @@
+📋 Proyecto: CLI To-Do List
+🎯 Objetivo
+
+Construir una aplicación de consola que permita gestionar tareas
+(crear, listar, completar y eliminar).
+
+1️⃣ Requerimientos Funcionales
+RF1 – Agregar tarea
+
+El sistema debe permitir agregar una nueva tarea ingresando un título.
+
+No puede estar vacío
+
+Se asigna un ID automático incremental
+
+Por defecto debe crearse como completed = False
+
+RF2 – Listar tareas
+
+El sistema debe mostrar todas las tareas con:
+
+ID
+
+Título
+
+Estado (Pendiente / Completada)
+
+Formato sugerido:
+
+1. [ ] Estudiar Python
+2. [X] Hacer ejercicio
+RF3 – Marcar tarea como completada
+
+El usuario debe poder:
+
+Ingresar el ID
+
+Cambiar su estado a completada
+
+Validaciones:
+
+El ID debe existir
+
+No debe permitir marcar algo inexistente
+
+RF4 – Eliminar tarea
+
+El sistema debe permitir eliminar una tarea por ID.
+
+Validaciones:
+
+El ID debe existir
+
+Manejar errores sin romper el programa
+
+RF5 – Menú interactivo
+
+Debe existir un menú principal con opciones:
+
+1. Agregar tarea
+2. Listar tareas
+3. Completar tarea
+4. Eliminar tarea
+5. Salir
+
+Debe ejecutarse en bucle hasta que el usuario decida salir.
+
+2️⃣ Requerimientos No Funcionales
+
+Código modular (usar funciones, no todo en el while)
+
+Manejo de errores limpio
+
+No debe romperse si el usuario escribe algo incorrecto
+
+Variables con nombres claros
+
+Sin lógica duplicada
+
+3️⃣ Modelo de Datos
+
+Estructura de cada tarea:
+
+{
+    "id": int,
+    "title": str,
+    "completed": bool
+}
+
+Las tareas se almacenarán en una lista:
+
+tasks = []
+4️⃣ Restricciones Técnicas
+
+No usar base de datos todavía
+
+No usar archivos todavía
+
+Solo memoria (lista en runtime)
+
+Solo Python estándar
+
+🚀 Extra (Opcional si te sientes fuerte)
+
+Validar que no se repitan títulos
+
+Mostrar contador de tareas pendientes
+
+Confirmación antes de eliminar
