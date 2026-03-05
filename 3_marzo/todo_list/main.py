@@ -54,6 +54,12 @@ while True:
     for task in tasksList:
       if task.id == taskId : task.status = True
 
+  elif choice == "4":
+    taskId = int(input("Join task ID: "))
+    for index, task in enumerate(tasksList):
+      if task.id == taskId : tasksList.pop(index)
+      print(f"The task with id {taskId} was deleted!")
+
   elif choice == "5":
     break
 

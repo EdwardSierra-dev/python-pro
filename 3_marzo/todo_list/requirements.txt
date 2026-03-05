@@ -5,7 +5,7 @@ Construir una aplicación de consola que permita gestionar tareas
 (crear, listar, completar y eliminar).
 
 1️⃣ Requerimientos Funcionales
-RF1 – Agregar tarea
+✅RF1 – Agregar tarea
 
 ✅El sistema debe permitir agregar una nueva tarea ingresando un título.
 
@@ -15,7 +15,7 @@ RF1 – Agregar tarea
 
 ✅Por defecto debe crearse como completed = False
 
-RF2 – Listar tareas
+✅RF2 – Listar tareas
 
 El sistema debe mostrar todas las tareas con:
 
@@ -29,7 +29,7 @@ Formato sugerido:
 
 1. [ ] Estudiar Python
 2. [X] Hacer ejercicio
-RF3 – Marcar tarea como completada
+✅RF3 – Marcar tarea como completada
 
 El usuario debe poder:
 
@@ -43,13 +43,13 @@ El ID debe existir
 
 No debe permitir marcar algo inexistente
 
-RF4 – Eliminar tarea
+✅RF4 – Eliminar tarea
 
-El sistema debe permitir eliminar una tarea por ID.
+✅El sistema debe permitir eliminar una tarea por ID.
 
 Validaciones:
 
-El ID debe existir
+✅El ID debe existir
 
 Manejar errores sin romper el programa
 
