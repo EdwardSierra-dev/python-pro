@@ -9,6 +9,7 @@ def is_valid_title(title):
 tasksList = []
 checked = ""
 increment = 0
+countingTodo = 0
 
 # Classes
 class Task:
@@ -52,7 +53,12 @@ while True:
   elif choice == "3":
     taskId = int(input("Join task ID: "))
     for task in tasksList:
-      if task.id == taskId : task.status = True
+      if task.id == taskId: 
+        task.status = True
+      if task.status == False:
+        countingTodo += 1
+    print(f"Pendientes: {countingTodo}")
+    countingTodo = 0
 
   elif choice == "4":
     taskId = int(input("Join task ID: "))

@@ -104,6 +104,6 @@ Solo Python estándar
 
 Validar que no se repitan títulos
 
-Mostrar contador de tareas pendientes
+✅Mostrar contador de tareas pendientes
 
 Confirmación antes de eliminar
