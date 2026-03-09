@@ -1,0 +1,54 @@
+Password Generator – Project Requirements
+
+1.  Generate a Random Password The program must generate a password
+    using random characters. It should support:
+
+-   Lowercase letters
+-   Uppercase letters
+-   Numbers
+-   Symbols
+
+Example: aB3$kL9!zQ
+
+2.  User Chooses Password Length The program should ask the user:
+
+How long do you want the password to be?
+
+Example: Length: 12
+
+3.  User Chooses Character Types The program must ask the user which
+    types of characters to include:
+
+Include uppercase letters? (y/n) Include numbers? (y/n) Include symbols?
+(y/n)
+
+4.  Validation If the user does not select any character type, the
+    program must display an error message.
+
+Example: Error: You must select at least one character type.
+
+5.  Password Generation Logic The program should:
+
+6.  Build a pool of characters based on the options selected by the
+    user.
+
+7.  Randomly select characters from that pool to build the password.
+
+8.  Display the Result
+
+Example: Generated password: A9kL2bQ1zP
+
+Bonus Challenges (Optional)
+
+Bonus 1 — Generate Multiple Passwords Ask the user:
+
+How many passwords do you want to generate?
+
+Bonus 2 — Copy to Clipboard Use the library: pyperclip
+
+Bonus 3 — Save Passwords to a File Save generated passwords to:
+
+passwords.txt
+
+Skills Practiced in This Project - random module - string module - if /
+else logic - input handling - lists - loops - basic validation
