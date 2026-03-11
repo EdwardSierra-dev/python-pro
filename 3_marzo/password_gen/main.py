@@ -34,6 +34,6 @@ for i in range(numberOfPasswords):
     for j in range(passwordLen):
       password += passwordParams[randrange(0, len(passwordParams), 1)]
 
-  print(f"Su contraseña {i + 1} es: {password}")
-  pyperclip.copy(password)
-  print("Password was copied in you clipboard!")
+    print(f"Su contraseña {i + 1} es: {password}")
+    pyperclip.copy(password)
+    print("Password was copied in you clipboard!")
