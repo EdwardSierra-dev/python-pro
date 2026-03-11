@@ -1,0 +1,103 @@
+📋 Requerimientos
+1️⃣ Menú principal
+
+✅El programa debe mostrar un menú repetidamente.
+
+Ejemplo:
+
+✅1. Add contact
+✅2. View contacts
+✅3. Search contact
+✅4. Delete contact
+✅5. Exit
+
+✅El programa solo termina cuando el usuario elige Exit.
+
+✅2️⃣ Add Contact
+
+✅Permite agregar un contacto con:
+
+✅Name
+✅Phone
+✅Email
+
+✅Los contactos deben guardarse en memoria usando una estructura de datos.
+
+Ejemplo conceptual:
+
+{
+  "name": "John",
+  "phone": "123456",
+  "email": "john@email.com"
+}
+
+3️⃣ View Contacts
+
+Muestra todos los contactos guardados.
+
+Ejemplo:
+
+1. John - 123456 - john@email.com
+2. Ana - 987654 - ana@email.com
+
+Si no hay contactos:
+
+No contacts found
+4️⃣ Search Contact
+
+Permite buscar por nombre.
+
+Ejemplo:
+
+Search: Ana
+
+Resultado:
+
+Ana - 987654 - ana@email.com
+5️⃣ Delete Contact
+
+Permite eliminar un contacto.
+
+Puede ser por:
+
+nombre
+
+o índice de la lista
+
+Ejemplo:
+
+Delete contact: Ana
+Contact deleted
+6️⃣ Exit
+
+El programa termina.
+
+⭐ Bonus (muy recomendado)
+
+Estos ya te hacen subir nivel.
+
+Bonus 1 — Guardar contactos en archivo
+
+Guardar en un archivo:
+
+contacts.json
+
+Para que no se pierdan al cerrar el programa.
+
+Bonus 2 — Cargar contactos al iniciar
+
+Cuando el programa inicia:
+
+leer contacts.json
+
+y cargar los contactos.
+
+Bonus 3 — Validaciones
+
+Ejemplos:
+
+no permitir nombre vacío
+
+evitar duplicados
+
+validar email básico
