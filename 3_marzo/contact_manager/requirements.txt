@@ -23,7 +23,7 @@ Ejemplo:
 
 ✅Los contactos deben guardarse en memoria usando una estructura de datos.
 
-Ejemplo conceptual:
+✅Ejemplo conceptual:
 
 {
   "name": "John",
@@ -33,27 +33,27 @@ Ejemplo conceptual:
 
 3️⃣ View Contacts
 
-Muestra todos los contactos guardados.
+✅Muestra todos los contactos guardados.
 
 Ejemplo:
 
-1. John - 123456 - john@email.com
-2. Ana - 987654 - ana@email.com
+✅1. John - 123456 - john@email.com
+✅2. Ana - 987654 - ana@email.com
 
-Si no hay contactos:
+✅Si no hay contactos:
 
-No contacts found
+✅No contacts found
 4️⃣ Search Contact
 
-Permite buscar por nombre.
+✅Permite buscar por nombre.
 
 Ejemplo:
 
-Search: Ana
+✅Search: Ana
 
 Resultado:
 
-Ana - 987654 - ana@email.com
+✅Ana - 987654 - ana@email.com
 5️⃣ Delete Contact
 
 Permite eliminar un contacto.

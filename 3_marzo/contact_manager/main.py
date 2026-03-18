@@ -17,8 +17,10 @@ class Contact:
 contact_list = []
 user_choice = ""
 increment = 0
+name_to_search = ""
 
 while True:
+
   print("Select the option ")
   print("1. Add contact")
   print("2. View contacts")
@@ -28,6 +30,8 @@ while True:
 
   user_choice = input("Please, select an option (1-5): ")
 
+  if user_choice == "5" : break
+  
   if user_choice == "1":
     increment += 1
     contact_name = input("Enter contact name: ")
@@ -37,12 +41,13 @@ while True:
       print("The fields: name and phone cannot be empty")
     else:
       id = increment
-      name = contact_name
+      name = contact_name.lower()
       phone = contact_phone
-      email = contact_email
+      email = contact_email.lower()
       contact = Contact(id, name, phone, email)
       contact_list.append(contact)
       print("The contact was registered!")
+
   elif user_choice == "2":
     if len(contact_list) == 0:
       print("No contacts found!")
@@ -50,4 +55,33 @@ while True:
       for contact in contact_list:
         print(f"{contact.name} - {contact.phone_number} - {contact.email}")
 
-  if user_choice == "5" : break
+  elif user_choice == "3":
+    name_to_search = input(("Enter contact name: "))
+    if name_to_search == "":
+      print("Enter a contact name, Please!")
+    else:
+      if len(contact_list) == 0:
+        print("The list doesn't have contacts")
+      else:
+        for contact in contact_list:
+          if name_to_search == contact.name:
+            print(f"{contact.name} - {contact.phone_number} - {contact.email}")
+          else:
+            print("This contact doesn't exist!")  
+
+  elif user_choice == "4":
+    name_to_search = input(("Enter contact name: "))
+    if name_to_search == "":
+      print("Enter a contact name, Please!")
+    else:
+      if len(contact_list) == 0:
+        print("The list doesn't have contacts")
+      else:
+        for contact in contact_list:
+          if name_to_search == contact.name:
+            print("Eliminaste esa mondá")
+          else:
+            print("This contact doesn't exist!")
+
+  else:
+    print("Please enter a valid option!")
