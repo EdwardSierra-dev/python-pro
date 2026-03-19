@@ -34,7 +34,7 @@ while True:
   
   if user_choice == "1":
     increment += 1
-    contact_name = input("Enter contact name: ")
+    contact_name = input("Enter contact name: ").lower()
     contact_phone = input("Enter contact phone: ")
     contact_email = input("Enter contact email: ")
     if is_field_empty(contact_name) == False or is_field_empty(contact_phone) == False:
@@ -56,7 +56,7 @@ while True:
         print(f"{contact.name} - {contact.phone_number} - {contact.email}")
 
   elif user_choice == "3":
-    name_to_search = input(("Enter contact name: "))
+    name_to_search = input(("Enter contact name: ")).lower()
     if name_to_search == "":
       print("Enter a contact name, Please!")
     else:
@@ -77,8 +77,9 @@ while True:
       if len(contact_list) == 0:
         print("The list doesn't have contacts")
       else:
-        for contact in contact_list:
+        for index, contact in enumerate(contact_list):
           if name_to_search == contact.name:
+            contact_list.pop(index)
             print("Eliminaste esa mondá")
           else:
             print("This contact doesn't exist!")
