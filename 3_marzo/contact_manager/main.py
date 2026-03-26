@@ -4,6 +4,27 @@ def is_field_empty(data):
     return False
   else:
     return True
+  
+def create_contact(id, name, phone, email):
+  contact = Contact(id, name, phone, email)
+  contact_list.append(contact)
+  return print("The contact was registered!")
+
+def search_contact(name):
+  for contact in contact_list:
+    if name == contact.name:
+      return print(f"{contact.name} - {contact.phone_number} - {contact.email}")
+    else:
+      return print("This contact doesn't exist!")
+
+def delete_contact(name):
+  for index, contact in enumerate(contact_list):
+    if name == contact.name:
+      contact_list.pop(index)
+      return print("Eliminaste esa mondá")
+    else:
+      return print("This contact doesn't exist!")
+  
 
 # Classes
 class Contact:
@@ -36,17 +57,12 @@ while True:
     increment += 1
     contact_name = input("Enter contact name: ").lower()
     contact_phone = input("Enter contact phone: ")
-    contact_email = input("Enter contact email: ")
+    contact_email = input("Enter contact email: ").lower()
+
     if is_field_empty(contact_name) == False or is_field_empty(contact_phone) == False:
       print("The fields: name and phone cannot be empty")
     else:
-      id = increment
-      name = contact_name.lower()
-      phone = contact_phone
-      email = contact_email.lower()
-      contact = Contact(id, name, phone, email)
-      contact_list.append(contact)
-      print("The contact was registered!")
+      create_contact(increment, contact_name, contact_phone, contact_email)
 
   elif user_choice == "2":
     if len(contact_list) == 0:
@@ -63,11 +79,8 @@ while True:
       if len(contact_list) == 0:
         print("The list doesn't have contacts")
       else:
-        for contact in contact_list:
-          if name_to_search == contact.name:
-            print(f"{contact.name} - {contact.phone_number} - {contact.email}")
-          else:
-            print("This contact doesn't exist!")  
+        search_contact(name_to_search)
+
 
   elif user_choice == "4":
     name_to_search = input(("Enter contact name: "))
@@ -77,12 +90,7 @@ while True:
       if len(contact_list) == 0:
         print("The list doesn't have contacts")
       else:
-        for index, contact in enumerate(contact_list):
-          if name_to_search == contact.name:
-            contact_list.pop(index)
-            print("Eliminaste esa mondá")
-          else:
-            print("This contact doesn't exist!")
+        delete_contact(name_to_search)
 
   else:
     print("Please enter a valid option!")

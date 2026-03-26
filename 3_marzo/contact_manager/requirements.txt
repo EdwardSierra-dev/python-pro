@@ -56,21 +56,21 @@ Resultado:
 ✅Ana - 987654 - ana@email.com
 5️⃣ Delete Contact
 
-Permite eliminar un contacto.
+✅Permite eliminar un contacto.
 
-Puede ser por:
+✅Puede ser por:
 
-nombre
+✅nombre
 
 o índice de la lista
 
-Ejemplo:
+✅Ejemplo:
 
-Delete contact: Ana
-Contact deleted
-6️⃣ Exit
+✅Delete contact: Ana
+✅Contact deleted
+✅6️⃣ Exit
 
-El programa termina.
+✅El programa termina.
 
 ⭐ Bonus (muy recomendado)
 
@@ -96,7 +96,7 @@ Bonus 3 — Validaciones
 
 Ejemplos:
 
-no permitir nombre vacío
+✅no permitir nombre vacío
 
 evitar duplicados
 
