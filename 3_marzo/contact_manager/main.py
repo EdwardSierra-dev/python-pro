@@ -1,14 +1,35 @@
+import json
+
 # Functions
 def is_field_empty(data):
   if data == "":
     return False
   else:
     return True
-  
+
 def create_contact(id, name, phone, email):
   contact = Contact(id, name, phone, email)
+
+  contact_dict = {
+    "id": contact.id,
+    "name": contact.name,
+    "phone": contact.phone_number,
+    "email": contact.email
+  }
+
+  contact_list.append(contact_dict)
+  print("The contact was registered!")
+
+
+def save_contacts():
+  with open("contacts.json", "w") as file:
+    json.dump(contact_list, file, indent=4)
+
+
+"""def create_contact(id, name, phone, email):
+  contact = Contact(id, name, phone, email)
   contact_list.append(contact)
-  return print("The contact was registered!")
+  return print("The contact was registered!")"""
 
 def search_contact(name):
   for contact in contact_list:
