@@ -1,0 +1,125 @@
+🧩 1. Modelo de Datos
+
+Cada producto debe tener:
+
+id: int
+name: str
+quantity: int
+price: float
+✅ Reglas
+id debe ser único
+quantity no puede ser negativo
+price debe ser mayor a 0
+⚙️ 2. Funcionalidades (MVP)
+
+2.1 ➕ Agregar producto
+
+El sistema debe permitir agregar un producto nuevo.
+
+✅ Criterios
+No se pueden repetir IDs
+Validar datos antes de guardar
+Guardar automáticamente en JSON
+
+2.2 📋 Listar productos
+
+Mostrar todos los productos registrados.
+
+✅ Criterios
+Si no hay productos → mostrar mensaje: "Inventory is empty"
+Mostrar en formato legible
+2.3 🔍 Buscar producto
+
+Buscar por nombre o ID.
+
+✅ Criterios
+Si no existe → "Product not found"
+Mostrar datos completos si existe
+
+2.4 ✏️ Actualizar producto
+
+Permitir modificar:
+
+nombre
+precio
+✅ Criterios
+Validar que el producto exista
+No permitir valores inválidos
+
+2.5 ❌ Eliminar producto
+
+Eliminar un producto del inventario.
+
+✅ Criterios
+Confirmar que existe antes de eliminar
+Persistir cambio en JSON
+
+📦 2.6 Gestión de Stock
+➕ Aumentar stock
+➖ Disminuir stock
+✅ Criterios
+No permitir stock negativo
+Validar que el producto exista
+Persistir cambios
+
+💾 3. Persistencia (JSON)
+
+Debes tener un archivo:
+
+data.json
+✅ Requerimientos
+Cargar datos al iniciar el programa
+Guardar cambios después de cada operación
+Manejar errores si el archivo no existe
+
+🖥️ 4. Interfaz (CLI)
+
+Menú en consola:
+
+1. Add product
+2. List products
+3. Search product
+4. Update product
+5. Delete product
+6. Increase stock
+7. Decrease stock
+8. Exit
+✅ Criterios
+Loop infinito hasta que el usuario salga
+Validar inputs (no confiar en el usuario ❗)
+
+🧱 5. Estructura del Proyecto
+inventory_system/
+│
+├── main.py        # menú y flujo principal
+├── models.py      # clase Product
+├── services.py    # lógica de negocio
+├── storage.py     # JSON (load/save)
+└── data.json
+
+🛑 6. Validaciones Obligatorias
+No permitir strings vacíos
+No permitir números negativos
+Manejar errores con try/except
+No crashear nunca ❗
+
+🧪 7. Casos de Prueba (IMPORTANTÍSIMO)
+
+Debes probar:
+
+Agregar producto válido ✅
+Agregar producto con ID repetido ❌
+Disminuir stock más de lo disponible ❌
+Buscar producto inexistente ❌
+JSON vacío o inexistente ✅
+🚀 BONUS (si quieres destacar)
+Mostrar valor total del inventario 💰
+Ordenar productos por precio o cantidad
+Alertar productos con bajo stock (ej: < 5)
+🧠 Mentalidad de Tech Lead (esto es clave)
+
+No es solo que funcione. Es que:
+
+El código sea modular
+Cada archivo tenga una responsabilidad
+Sea fácil de escalar (mañana lo pasas a API)

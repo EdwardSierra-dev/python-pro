@@ -14,7 +14,7 @@ python-pro/
 │   ├── file_organizer/
 │
 ├── 04_oop/
-│   ├── bank_account/
+│   ├── bank_account/ User → main.py → services.py → storage.py → JSON
 │   ├── inventory_system/
 │
 ├── 05_testing/
