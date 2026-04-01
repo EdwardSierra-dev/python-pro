@@ -74,7 +74,7 @@ Manejar errores si el archivo no existe
 
 🖥️ 4. Interfaz (CLI)
 
-Menú en consola:
+✅ Menú en consola:
 
 1. Add product
 2. List products
