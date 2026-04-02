@@ -19,8 +19,8 @@ price debe ser mayor a 0✅
 El sistema debe permitir agregar un producto nuevo.
 
 ✅ Criterios
-No se pueden repetir IDs
-Validar datos antes de guardar
+No se pueden repetir IDs - Falta incremental
+Validar datos antes de guardar✅
 Guardar automáticamente en JSON
 
 2.2 📋 Listar productos
@@ -30,6 +30,7 @@ Mostrar todos los productos registrados.
 ✅ Criterios
 Si no hay productos → mostrar mensaje: "Inventory is empty"
 Mostrar en formato legible
+
 2.3 🔍 Buscar producto
 
 Buscar por nombre o ID.
@@ -125,3 +126,7 @@ No es solo que funcione. Es que:
 El código sea modular
 Cada archivo tenga una responsabilidad
 Sea fácil de escalar (mañana lo pasas a API)
+
+Mejoras:
+
+- Funcion para metodo de check data.
