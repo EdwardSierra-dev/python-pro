@@ -2,14 +2,16 @@
 
 Cada producto debe tener:
 
-id: int
-name: str
-quantity: int
-price: float
+id: int✅
+name: str✅
+quantity: int✅
+price: float✅
+
 ✅ Reglas
+
 id debe ser único
-quantity no puede ser negativo
-price debe ser mayor a 0
+quantity no puede ser negativo✅
+price debe ser mayor a 0✅
 ⚙️ 2. Funcionalidades (MVP)
 
 2.1 ➕ Agregar producto

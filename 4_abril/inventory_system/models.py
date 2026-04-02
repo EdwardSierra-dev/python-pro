@@ -1,5 +1,7 @@
+"""User → main → services → storage → data.json"""
+
 class Product:
-	def __init__(self, id: int, name: str, quantity: int, price: float, status: str):
+	def __init__(self, id: int, name: str, quantity: int, price: float, status: bool):
 		if not name:
 			raise ValueError("Name cannot be empty")
 

@@ -1,3 +1,5 @@
+"""User → main → services → storage → data.json"""
+
 # CRUD
 
 def add_product():

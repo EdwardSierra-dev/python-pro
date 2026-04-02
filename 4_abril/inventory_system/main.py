@@ -1,6 +1,17 @@
+"""User → main → services → storage → data.json"""
+
+# Imports
+import services
+from models import Product
+
 # Vars
 menu_activated = True
 user_selection = ""
+product_id = 0
+product_name = ""
+product_qty = 0
+product_price = 0
+product_status = True
 
 while menu_activated:
 	print("Welcome to the storage app!")
@@ -16,3 +27,22 @@ while menu_activated:
 	user_selection = input("Select 1-8: ")
 
 	if user_selection == "8" : menu_activated = False
+
+	if user_selection == "1":
+		product_name = input("Enter product name: ")
+
+		if product_name == "" or product_name == " ":
+			print("Cannot create product whitout name!, Try again")
+		else:
+			product_qty = int(input("How much ... ? "))
+			if product_qty < 0:
+				print("Cannot create product with negative stock")
+			else:
+				product_price = int(input("Price ...? "))
+				if product_price > 0:
+					product_status = True
+					product_id = "1"
+					temp_product = Product(product_id, product_name, product_qty, product_price, product_status)
+					print(f"New product added {temp_product.name}!")
+				else:
+					print("Cannot create product with price 0")
