@@ -1,7 +1,7 @@
 """User → main → services → storage → data.json"""
 
 # Imports
-import services
+from services import add_product
 from models import Product
 
 # Vars
@@ -44,5 +44,6 @@ while menu_activated:
 					product_id = "1"
 					temp_product = Product(product_id, product_name, product_qty, product_price, product_status)
 					print(f"New product added {temp_product.name}!")
+					add_product()
 				else:
 					print("Cannot create product with price 0")

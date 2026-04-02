@@ -3,7 +3,7 @@
 # CRUD
 
 def add_product():
-  return print("Agregaste un producto")
+  return print("Agregaste el producto")
 
 def get_products():
   return print("Estos son todos tus productos")
