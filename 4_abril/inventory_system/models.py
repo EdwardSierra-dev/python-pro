@@ -1,7 +1,7 @@
 """User → main → services → storage → data.json"""
 
 class Product:
-	def __init__(self, id: int, name: str, quantity: int, price: float, status: bool):
+	def __init__(self, id: int, name: str, quantity: int, price: float, is_active):
 		if not name:
 			raise ValueError("Name cannot be empty")
 
@@ -15,4 +15,4 @@ class Product:
 		self.name = name
 		self.quantity = quantity
 		self.price = price
-		self.status = status
+		self.is_active = is_active

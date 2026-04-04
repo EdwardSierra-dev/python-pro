@@ -14,7 +14,7 @@ quantity no puede ser negativo✅
 price debe ser mayor a 0✅
 ⚙️ 2. Funcionalidades (MVP)
 
-2.1 ➕ Agregar producto
+2.1 ➕ Agregar producto✅
 
 El sistema debe permitir agregar un producto nuevo.
 
@@ -25,19 +25,19 @@ Guardar automáticamente en JSON
 
 2.2 📋 Listar productos
 
-Mostrar todos los productos registrados.
+Mostrar todos los productos registrados.✅
 
 ✅ Criterios
-Si no hay productos → mostrar mensaje: "Inventory is empty"
-Mostrar en formato legible
+Si no hay productos → mostrar mensaje: "Inventory is empty"✅
+Mostrar en formato legible✅
 
-2.3 🔍 Buscar producto
+2.3 🔍 Buscar producto✅
 
-Buscar por nombre o ID.
+Buscar por nombre o ID.✅
 
 ✅ Criterios
-Si no existe → "Product not found"
-Mostrar datos completos si existe
+Si no existe → "Product not found"✅
+Mostrar datos completos si existe✅
 
 2.4 ✏️ Actualizar producto
 
@@ -129,4 +129,5 @@ Sea fácil de escalar (mañana lo pasas a API)
 
 Mejoras:
 
-- Funcion para metodo de check data.
+- Función para metodo de check data.
+- Función para crear id incremental

@@ -1,8 +1,7 @@
 """User → main → services → storage → data.json"""
 
 # Imports
-from services import add_product
-from models import Product
+from services import create_product, get_products, get_product, update_product_info
 
 # Vars
 menu_activated = True
@@ -12,6 +11,7 @@ product_name = ""
 product_qty = 0
 product_price = 0
 product_status = True
+set_list = []
 
 while menu_activated:
 	print("Welcome to the storage app!")
@@ -29,7 +29,7 @@ while menu_activated:
 	if user_selection == "8" : menu_activated = False
 
 	if user_selection == "1":
-		product_name = input("Enter product name: ")
+		product_name = input("Enter product name: ").upper()
 
 		if product_name == "" or product_name == " ":
 			print("Cannot create product whitout name!, Try again")
@@ -40,20 +40,26 @@ while menu_activated:
 			else:
 				product_price = int(input("Price ...? "))
 				if product_price > 0:
-					product_status = True
-					product_id = "1"
-					check_product_data = input(f"Product name: {product_name}\n" \
+					product_is_active = True
+					check_product_data = input(f"Product name: {product_name.upper()}\n" \
 											f"Product quantity: {product_qty}\n" \
 											f"Product price: {product_price}\n" \
 											"Is this correct? (y/n): ")
 					if check_product_data == "y":
-						temp_product = Product(product_id, product_name, product_qty, product_price, product_status)
-						print(f"New product added {temp_product.name}!")
-						add_product()
+						set_list = create_product(1, product_name, product_qty, product_price, product_is_active)
+						print(f"New Product Added {product_name}!")
 					else:
 						print("Product creation cancelled")
 				else:
 					print("Cannot create product with price 0")
 
 	elif user_selection == "2":
-		print("List of products")
+		get_products(set_list)
+
+	elif user_selection == "3":
+		product_name_to_search = input("Enter the name: ").upper()
+		get_product(set_list, product_name_to_search)
+
+	elif user_selection == "4":
+		product_name_to_search = input("Enter the name: ").upper()
+		update_product_info(set_list, product_name_to_search)
