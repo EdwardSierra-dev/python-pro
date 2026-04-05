@@ -18,15 +18,17 @@ def get_products(product_list):
       return print(f"{product.name} - {product.price} - {product.quantity}")
 
 def get_product(product_list, product_name):
-  if len(product_list) == 0:
-    return print("Inventory is empty")
-  else:
-    for product in product_list:
-      if product_name == product.name:
-        return print(f" Product found! \n{product.name} - {product.price} - {product.quantity}")
-      else:
-        return print("Product not found!")
+	if len(product_list) == 0:
+		print("Inventory is empty")
+		return
 
+	for product in product_list:
+		if product_name.upper().strip() == product.name.upper().strip():
+			print(f"Product found!\n{product.name} - {product.price} - {product.quantity}")
+			return
+
+	print("Product not found!")
+	
 def update_product_info(product_list, product_name):
   if len(product_list) == 0:
     return print("Inventory is empty")
@@ -41,11 +43,27 @@ def update_product_info(product_list, product_name):
       else:
         return print("Product not found!")
 
-def delete_product():
-  return print("Eliminaste un producto")
+def delete_product(product_list, product_name):
+	if len(product_list) == 0:
+		print("Inventory is empty")
+		return
+	else:
+		for index, product in enumerate(product_list):
+			if product_name.upper().strip() == product.name.upper().strip():
+				product_list.pop(index)
+			return print(f"The product {product_name} was deleted!")
 
-def update_stock_by_product():
-  return print("Agregaste un producto")
+def update_stock_by_product(product_list, product_name):
+	if len(product_list) == 0:
+		print("Inventory is empty")
+		return
+	else:
+		for product in product_list:
+			if product_name.upper().strip() == product.name.upper().strip():
+				new_quantity = int(input("Enter the new quantity"))
+				product.quantity = new_quantity
+			return print(f"The stock {product_name} was update!")
+
 
 #def create_id(self):
 #  return self.id + 1

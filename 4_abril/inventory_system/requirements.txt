@@ -21,7 +21,7 @@ El sistema debe permitir agregar un producto nuevo.
 ✅ Criterios
 No se pueden repetir IDs - Falta incremental
 Validar datos antes de guardar✅
-Guardar automáticamente en JSON
+Guardar automáticamente en JSON - No se va a poder por ahora
 
 2.2 📋 Listar productos
 
@@ -39,15 +39,15 @@ Buscar por nombre o ID.✅
 Si no existe → "Product not found"✅
 Mostrar datos completos si existe✅
 
-2.4 ✏️ Actualizar producto
+2.4 ✏️ Actualizar producto✅
 
 Permitir modificar:
 
-nombre
-precio
+nombre✅
+precio✅
 ✅ Criterios
-Validar que el producto exista
-No permitir valores inválidos
+Validar que el producto exista✅
+No permitir valores inválidos✅
 
 2.5 ❌ Eliminar producto
 

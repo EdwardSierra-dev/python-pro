@@ -1,7 +1,7 @@
 """User → main → services → storage → data.json"""
 
 # Imports
-from services import create_product, get_products, get_product, update_product_info
+from services import *
 
 # Vars
 menu_activated = True
@@ -21,12 +21,11 @@ while menu_activated:
 				"3. Search a product\n" \
 				"4. Update a product\n" \
 				"5. Delete a product\n" \
-				"6. Increase stock\n" \
-				"7. Decrease stock\n" \
-				"8. Exit")
-	user_selection = input("Select 1-8: ")
+				"6. Update stock\n" \
+				"7. Exit")
+	user_selection = input("Select 1-7: ")
 
-	if user_selection == "8" : menu_activated = False
+	if user_selection == "7" : menu_activated = False
 
 	if user_selection == "1":
 		product_name = input("Enter product name: ").upper()
@@ -63,3 +62,14 @@ while menu_activated:
 	elif user_selection == "4":
 		product_name_to_search = input("Enter the name: ").upper()
 		update_product_info(set_list, product_name_to_search)
+	
+	elif user_selection == "5":
+		product_name_to_search = input("Enter the name: ").upper()
+		delete_product(set_list, product_name_to_search)
+
+	elif user_selection == "6":
+		product_name_to_search = input("Enter the name: ").upper()
+		update_stock_by_product(set_list, product_name_to_search)
+
+
+
