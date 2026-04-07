@@ -1,0 +1,83 @@
+🧩 1. Gestión de Productos
+✅ Debe permitir:
+Crear producto
+id (único)
+nombre
+precio (> 0)
+stock (≥ 0)
+estado (activo/inactivo)
+Listar productos
+solo activos por defecto
+Buscar producto por nombre
+Actualizar producto
+nombre
+precio
+Actualizar stock manualmente
+“Eliminar” producto (soft delete → is_active = False)
+
+
+
+🧾 2. Gestión de Ventas
+✅ Crear venta
+
+Una venta debe:
+
+tener un id
+contener uno o varios productos
+guardar:
+producto
+cantidad
+⚠️ Reglas de negocio (CLAVE)
+
+Cuando se crea una venta:
+
+✔ el producto debe existir
+✔ debe estar activo
+✔ debe haber suficiente stock
+🔥 Al vender:
+se descuenta el stock automáticamente
+💰 Cálculo
+
+La venta debe calcular:
+
+subtotal por producto
+total de la venta
+
+
+📊 3. Visualización
+✅ Debe permitir:
+Listar ventas
+Ver detalle de una venta:
+productos
+cantidades
+total
+🧠 4. Reglas generales
+No permitir:
+stock negativo
+precios inválidos
+ventas sin productos
+Manejar errores con raise (no prints en services)
+
+
+🧱 5. Arquitectura (OBLIGATORIO)
+main → services → models
+🔹 models
+Product
+Sale
+🔹 services
+product_service
+sale_service
+🔹 main
+menú
+inputs
+prints
+
+
+🔥 6. Extra (si quieres subir nivel)
+múltiples productos en una venta 🧠
+mostrar total acumulado de ventas
+filtrar productos por stock bajo
+💡 TL;DR
+
+👉 ya no es CRUD simple
+👉 ahora hay relaciones + reglas + lógica real
