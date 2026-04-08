@@ -16,5 +16,12 @@ class Product:
 		self.status = status
 
 class Sale:
-	def __init__(self):
+	def __init__(self, id, products, total):
+
+		if total < 0:
+			raise ValueError("The sale never must be negative")
+
+		self.id = id
+		self.products = products
+
 		pass
