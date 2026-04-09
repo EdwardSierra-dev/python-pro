@@ -17,3 +17,5 @@ def select_module(module_selection):
     print("Welcome to the sale module!")
   else:
     print("Please, Enter 1 o 2")
+
+  return module_selection

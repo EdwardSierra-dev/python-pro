@@ -1,4 +1,5 @@
 from services import *
+from models import *
 
 # Vars
 
@@ -9,8 +10,27 @@ while is_menu_active:
   print("What do you want to do ... ?")
   module_selection = input("1. Enter inventory module\n" \
                           "2. Enter sale module\n" \
-                          "Type 1 or 2 and press 'Enter': ")
+                          "3. Exit\n" \
+                          "Type 1-3 and press 'Enter': ")
   
   print("-" * 50)
 
+  if module_selection == "3":
+    is_menu_active == False
+
   select_module(module_selection)
+
+  if select_module(module_selection) == "1":
+    is_user_in_inventory = True
+    while is_user_in_inventory:
+      print("You had joined in inventory module!")
+      inventory_module_selection = input("1. Create product\n" \
+                            "2. Get products list\n" \
+                            "3. Look for a product by name\n" \
+                            "4. Update product (Name, Price or Stock)\n" \
+                            "5. Delete product by name\n" \
+                            "6. Exit\n" \
+                            "Type 1-6 and press 'Enter': \n")
+      
+      if inventory_module_selection == "6":
+        is_user_in_inventory = False
