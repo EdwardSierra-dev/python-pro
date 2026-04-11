@@ -34,3 +34,6 @@ while is_menu_active:
       
       if inventory_module_selection == "6":
         is_user_in_inventory = False
+      
+      elif inventory_module_selection == "1":
+        
