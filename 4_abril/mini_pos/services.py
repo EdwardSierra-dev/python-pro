@@ -1,3 +1,9 @@
+from models import Product
+
+# Vars
+
+product_list = []
+
 # Functions
 
 def gen_id():
@@ -5,7 +11,7 @@ def gen_id():
   id = 1
   id_list.append(id)
 
-  for i in len(id_list):
+  for i in range (len(id_list)):
     id += i
 
   return id
@@ -19,3 +25,22 @@ def select_module(module_selection):
     print("Please, Enter 1 o 2")
 
   return module_selection
+
+def create_product(name, price, stock, status):
+  if name == "" or name == " ":
+    print("The name cannot be empty!")
+    raise
+
+  if price < 0:
+    print("The price cannot be zero!")
+    raise
+
+  if stock <= 0:
+    print("The stock cannot be negative")
+    raise
+
+  id = gen_id()
+  new_product = Product(id, name, price, stock, status)
+  product_list.append(new_product)
+
+  return print("The product was created!")
