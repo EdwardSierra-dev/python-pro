@@ -44,3 +44,8 @@ def create_product(name, price, stock, status):
   product_list.append(new_product)
 
   return print("The product was created!")
+
+def get_products(name):
+  for product in product_list:
+
+    raise

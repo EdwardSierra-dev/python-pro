@@ -36,9 +36,20 @@ while is_menu_active:
         is_user_in_inventory = False
       
       elif inventory_module_selection == "1":
-        product_name = input("Enter de name of product: ")
+        product_name = input("Enter de name of product: ").upper()
         product_price = int(input("Enter the price: "))
         product_stock = int(input("Enter the stock of product: "))
         product_status = True
 
         create_product(product_name, product_price, product_stock, product_status)
+
+      elif inventory_module_selection == "2":
+        product_name = input("Enter de name of product: ").upper()
+        get_products(product_name)
+
+      else:
+        print("Please, Enter a valid option")
+
+  else:
+    print("Please, Enter a valid option")
+        
