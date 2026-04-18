@@ -15,7 +15,10 @@ while is_menu_active:
   
   print("-" * 50)
 
-  if select_module(module_selection) == "1":
+  if module_selection == "3":
+    is_menu_active = False
+  
+  elif select_module(module_selection) == "1":
     is_user_in_inventory = True
     while is_user_in_inventory:
       print("You had joined in inventory module!")
@@ -43,6 +46,3 @@ while is_menu_active:
 
       else:
         print("Please, Enter a valid option")
-
-  elif module_selection == "3":
-    is_menu_active = False

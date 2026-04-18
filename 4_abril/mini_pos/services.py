@@ -21,6 +21,8 @@ def select_module(module_selection):
     print("Welcome to the inventory module!")
   elif module_selection == "2":
     print("Welcome to the sale module!")
+  else:
+    print("Please, Enter 1 o 2")
 
   return module_selection
 
