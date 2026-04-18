@@ -21,8 +21,6 @@ def select_module(module_selection):
     print("Welcome to the inventory module!")
   elif module_selection == "2":
     print("Welcome to the sale module!")
-  else:
-    print("Please, Enter 1 o 2")
 
   return module_selection
 
@@ -45,7 +43,10 @@ def create_product(name, price, stock, status):
 
   return print("The product was created!")
 
-def get_products(name):
-  for product in product_list:
-
-    raise
+def get_products():
+  if len(product_list) == 0:
+    print("The inventory is empty")
+  else:
+    for product in product_list:
+      if product.status == True:
+        print(f"{product.name}")

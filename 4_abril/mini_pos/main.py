@@ -15,11 +15,6 @@ while is_menu_active:
   
   print("-" * 50)
 
-  if module_selection == "3":
-    is_menu_active == False
-
-  select_module(module_selection)
-
   if select_module(module_selection) == "1":
     is_user_in_inventory = True
     while is_user_in_inventory:
@@ -44,12 +39,10 @@ while is_menu_active:
         create_product(product_name, product_price, product_stock, product_status)
 
       elif inventory_module_selection == "2":
-        product_name = input("Enter de name of product: ").upper()
-        get_products(product_name)
+        get_products()
 
       else:
         print("Please, Enter a valid option")
 
-  else:
-    print("Please, Enter a valid option")
-        
+  elif module_selection == "3":
+    is_menu_active = False
