@@ -61,4 +61,9 @@ def get_product_by_name(name):
       if product.name == name:
         print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
       else:
-        print("This product not exist")
+        print("This product doesn't exist")
+
+def update_product(name, price, stock):
+  if len(product_list) == 0:
+    print("The inventory is empty")
+  else:

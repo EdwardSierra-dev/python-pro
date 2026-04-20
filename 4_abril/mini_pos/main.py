@@ -48,5 +48,15 @@ while is_menu_active:
         product_name = input("Enter the name of product: ").upper()
         get_product_by_name(product_name)
 
+      elif inventory_module_selection == "4":
+        product_name = input("Enter the new name of product: ").upper()
+        product_price = int(input("Enter the new price: "))
+        product_stock = int(input("Enter the new stock of product: "))
+
+        update_product(product_name, product_price, product_stock)
+
+
+
+
       else:
         print("Please, Enter a valid option")
