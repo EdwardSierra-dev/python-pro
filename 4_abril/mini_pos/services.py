@@ -51,4 +51,14 @@ def get_products():
   else:
     for product in product_list:
       if product.status == True:
-        print(f"{product.name}")
+        print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
+
+def get_product_by_name(name):
+  if len(product_list) == 0:
+    print("The inventory is empty")
+  else:
+    for product in product_list:
+      if product.name == name:
+        print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
+      else:
+        print("This product not exist")

@@ -1,14 +1,14 @@
 🧩 1. Gestión de Productos
 ✅ Debe permitir:
 
-Crear producto
-id (único)
-nombre
-precio (> 0)
-stock (≥ 0)
-estado (activo/inactivo)
+Crear producto✅ 
+id (único)✅ 
+nombre✅ 
+precio (> 0)✅ 
+stock (≥ 0)✅ 
+estado (activo/inactivo)✅ 
 
-Listar productos
+Listar productos✅ 
 solo activos por defecto
 Buscar producto por nombre
 Actualizar producto
