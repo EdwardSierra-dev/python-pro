@@ -9,12 +9,12 @@ stock (≥ 0)✅
 estado (activo/inactivo)✅ 
 
 Listar productos✅ 
-solo activos por defecto
-Buscar producto por nombre
-Actualizar producto
-nombre
-precio
-Actualizar stock manualmente
+solo activos por defecto✅ 
+Buscar producto por nombre✅ 
+Actualizar producto✅ 
+nombre✅ 
+precio✅ 
+Actualizar stock manualmente✅ 
 “Eliminar” producto (soft delete → is_active = False)
 
 

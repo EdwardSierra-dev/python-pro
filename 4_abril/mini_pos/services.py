@@ -3,11 +3,11 @@ from models import Product
 # Vars
 
 product_list = []
+id_list = []
 
 # Functions
 
 def gen_id():
-  id_list = []
   id = 1
   id_list.append(id)
 
@@ -53,6 +53,10 @@ def get_products():
       if product.status == True:
         print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
 
+"""Se debe mejorar la lógica de get_product_by_name
+Se está comparando cada objeto mas no buscando
+"""
+
 def get_product_by_name(name):
   if len(product_list) == 0:
     print("The inventory is empty")
@@ -64,15 +68,9 @@ def get_product_by_name(name):
         print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
 
 def update_product(name, price, stock):
-  if len(product_list) == 0:
-    print("The inventory is empty")
-  else:
-    for product in product_list:
-      if name.upper().strip() == product.name.upper().strip():
-        product.name = name
-        product.price = price
-        product.stock = stock
-  
-  return print("The product was updated!")
-
-
+  for product in product_list:
+    if name.upper().strip() == product.name.upper().strip():
+      product.name = name
+      product.price = price
+      product.stock = stock
+  print("The product was updated!")
