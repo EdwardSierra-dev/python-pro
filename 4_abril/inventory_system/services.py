@@ -64,9 +64,5 @@ def update_stock_by_product(product_list, product_name):
 				product.quantity = new_quantity
 			return print(f"The stock {product_name} was update!")
 
-
-#def create_id(self):
-#  return self.id + 1
-
 def set_product_status():
   return print("Status was updated!")

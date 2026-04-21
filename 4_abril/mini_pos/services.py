@@ -58,12 +58,21 @@ def get_product_by_name(name):
     print("The inventory is empty")
   else:
     for product in product_list:
-      if product.name == name:
-        print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
-      else:
+      if product.name != name:
         print("This product doesn't exist")
+      else:
+        print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
 
 def update_product(name, price, stock):
   if len(product_list) == 0:
     print("The inventory is empty")
   else:
+    for product in product_list:
+      if name.upper().strip() == product.name.upper().strip():
+        product.name = name
+        product.price = price
+        product.stock = stock
+  
+  return print("The product was updated!")
+
+
