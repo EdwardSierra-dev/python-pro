@@ -58,7 +58,8 @@ while is_menu_active:
 
       elif inventory_module_selection == "5":
         product_selected = input("What product do you want to delete? ").upper()
-        get_product_by_name(product_selected)
+        product_to_delete = get_product_by_name(product_selected)
+        delete_product(product_to_delete)
 
       else:
         print("Please, Enter a valid option")

@@ -51,7 +51,7 @@ def get_products():
   else:
     for product in product_list:
       if product.status == True:
-        print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
+        print(f"{product.id} - {product.name} - {product.stock} - {product.price} - {product.status}")
 
 """Se debe mejorar la lógica de get_product_by_name
 Se está comparando cada objeto mas no buscando
@@ -63,9 +63,8 @@ def get_product_by_name(name):
   else:
     for product in product_list:
       if product.name != name:
-        print("This product doesn't exist")
-      else:
         print(f"{product.id} - {product.name} - {product.stock} - {product.price}")
+  return product
 
 def update_product(name, price, stock):
   for product in product_list:
@@ -74,3 +73,7 @@ def update_product(name, price, stock):
       product.price = price
       product.stock = stock
   print("The product was updated!")
+
+def delete_product(product: Product):
+  product.status = False
+  print(f"The product {product.name} was deleted!")
