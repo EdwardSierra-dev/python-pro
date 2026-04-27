@@ -63,3 +63,17 @@ while is_menu_active:
 
       else:
         print("Please, Enter a valid option")
+
+  elif select_module(module_selection) == "2":
+    is_user_in_inventory = True
+    if is_inventory_in_zero() == True:
+      print("The inventory is empty, please add products")
+    else:
+      while is_user_in_inventory:
+        print("You had joined in inventory module!")
+        sale_module_selection = input("1. New sale\n" \
+                            "Type q and press 'Enter': \n").lower()
+        
+        if sale_module_selection == "1":
+          print("hi")
+      

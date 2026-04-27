@@ -77,3 +77,13 @@ def update_product(name, price, stock):
 def delete_product(product: Product):
   product.status = False
   print(f"The product {product.name} was deleted!")
+
+def is_inventory_in_zero():
+  if len(product_list) == 0:
+    return True
+  elif len(product_list) > 0:
+    return False
+  
+def record_a_sale(id, product_list):
+
+  return print("You are the dick")

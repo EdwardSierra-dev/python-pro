@@ -15,7 +15,7 @@ Actualizar producto✅
 nombre✅ 
 precio✅ 
 Actualizar stock manualmente✅ 
-“Eliminar” producto (soft delete → is_active = False)
+“Eliminar” producto (soft delete → is_active = False)✅
 
 
 
