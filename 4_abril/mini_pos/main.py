@@ -75,5 +75,9 @@ while is_menu_active:
                             "Type q and press 'Enter': \n").lower()
         
         if sale_module_selection == "1":
-          print("hi")
-      
+          customer_name = input("Customer name: ")
+          quantity_of_products = int(input("How many products do you want to add?: "))
+
+          add_products_in_sale(quantity_of_products, customer_name)
+
+          
