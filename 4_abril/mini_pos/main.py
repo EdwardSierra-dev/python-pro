@@ -78,6 +78,8 @@ while is_menu_active:
           customer_name = input("Customer name: ")
           quantity_of_products = int(input("How many products do you want to add?: "))
 
-          add_products_in_sale(quantity_of_products, customer_name)
+          add_products_in_sale(quantity_of_products)
+          print(f"Customer:\n{customer_name}\nItems:\n")
+          print_items()
 
           

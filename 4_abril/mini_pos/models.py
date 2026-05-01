@@ -26,7 +26,7 @@ class Sale:
 		self.total = total
 
 class ProductInSale:
-	def __init__(self, name, qty, price, item):
+	def __init__(self, name, qty, price):
 
 		if price < 0:
 			raise ValueError("The sale never must be negative")
@@ -34,6 +34,8 @@ class ProductInSale:
 		self.name = name
 		self.price = price
 		self.qty = qty
-		self.item = item
 
-		pass
+	def get_total(qty, price):
+		total = qty * price
+
+		return total

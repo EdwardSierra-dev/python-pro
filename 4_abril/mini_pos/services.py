@@ -1,10 +1,11 @@
-from models import Product
+from models import Product, ProductInSale, Sale
 
 # Vars
 
 product_list = []
 id_list = []
 product_list_in_sale = []
+sale_list = []
 
 # Functions
 
@@ -85,22 +86,24 @@ def is_inventory_in_zero():
   elif len(product_list) > 0:
     return False
 
-def add_products_in_sale(quantity_of_products, customer):
+def add_products_in_sale(quantity_of_products):
   for i in range(1, quantity_of_products):
-    product_name = input(f"Ingrese el producto {i}: ")
-    get_name = get_product_by_name(product_name).name
-    get_price = get_product_by_name(product_name).price
-    product_list_in_sale.append(get_name,get_price)
-    """UTILIZA EL OTRO MODELO CREADO PARA CADA ITEM DE LA LISTA"""
-  return print(get_name, get_price, customer)
+    product = input(f"Enter the product {i}: ").upper()
+    qty = int(input(f"Enter the units of product {i}: "))
+    price = int(input("Price: "))
+    selected_product = ProductInSale(product, qty, price)
+    product_list_in_sale.append(selected_product)
+    total_sale = selected_product.get_total(qty, price)
+    sale = Sale(gen_id(),product_list_in_sale,total_sale)
+
+  return print("hi")
+
+def print_items():
+  for product in product_list_in_sale:
+    print(product.name, product.qty)
 
 
 
 
 
-"""def record_a_sale(quantity_of_products, customer):
-  product = ""
-  for i in range(1,quantity_of_products):
-    product = input(f"Add the product {i}").upper()
-    
-  return print("You are the dick")"""
+"""SE FINALIZA YA NO DOT MAS"""
