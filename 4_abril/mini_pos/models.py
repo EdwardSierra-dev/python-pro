@@ -15,7 +15,7 @@ class Product:
 		self.stock = stock
 		self.status = status
 
-class Sale:
+"""class Sale:
 	def __init__(self, id, products, total):
 
 		if total < 0:
@@ -39,3 +39,4 @@ class ProductInSale:
 		total = qty * price
 
 		return total
+"""

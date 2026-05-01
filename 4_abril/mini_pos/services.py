@@ -1,4 +1,4 @@
-from models import Product, ProductInSale, Sale
+from models import Product
 
 # Vars
 
@@ -86,7 +86,7 @@ def is_inventory_in_zero():
   elif len(product_list) > 0:
     return False
 
-def add_products_in_sale(quantity_of_products):
+"""def add_products_in_sale(quantity_of_products):
   for i in range(1, quantity_of_products):
     product = input(f"Enter the product {i}: ").upper()
     qty = int(input(f"Enter the units of product {i}: "))
@@ -102,8 +102,4 @@ def print_items():
   for product in product_list_in_sale:
     print(product.name, product.qty)
 
-
-
-
-
-"""SE FINALIZA YA NO DOT MAS"""
+SE FINALIZA YA NO DOT MAS"""

@@ -65,21 +65,6 @@ while is_menu_active:
         print("Please, Enter a valid option")
 
   elif select_module(module_selection) == "2":
-    is_user_in_inventory = True
-    if is_inventory_in_zero() == True:
-      print("The inventory is empty, please add products")
-    else:
-      while is_user_in_inventory:
-        print("You had joined in inventory module!")
-        sale_module_selection = input("1. New sale\n" \
-                            "Type q and press 'Enter': \n").lower()
-        
-        if sale_module_selection == "1":
-          customer_name = input("Customer name: ")
-          quantity_of_products = int(input("How many products do you want to add?: "))
-
-          add_products_in_sale(quantity_of_products)
-          print(f"Customer:\n{customer_name}\nItems:\n")
-          print_items()
+    print("We are working in sales module!! Coming soon!")
 
           
