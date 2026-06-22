@@ -1,3 +1,3 @@
 # Lists
 product_list = []
-order_product_list = []
+product_in_order = []
